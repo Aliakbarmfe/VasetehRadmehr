@@ -192,6 +192,61 @@
             border-radius: 4px;
         }
 
+        /* بخش تصویر بالای صفحه همراه دو دکمه در کناره‌ها */
+        .top-banner-wrapper {
+            position: relative;
+            width: 85%;
+            margin: 0 auto 20px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .top-banner-img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+        }
+
+        .side-action-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(8px);
+            color: #ffffff;
+            border: 1px solid #38bdf8;
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            transition: all 0.3s ease;
+            white-space: nowrap;
+            z-index: 2;
+        }
+
+        /* نصف دکمه داخل عکس و نصف دکمه بیرون عکس */
+        .side-action-btn.right-btn {
+            right: 0;
+            transform: translate(50%, -50%);
+        }
+
+        .side-action-btn.left-btn {
+            left: 0;
+            transform: translate(-50%, -50%);
+        }
+
+        .side-action-btn:hover {
+            background: rgba(56, 189, 248, 0.4);
+            border-color: #ffffff;
+            box-shadow: 0 0 12px rgba(56, 189, 248, 0.6);
+        }
+
         /* هدر */
         .header {
             text-align: center;
@@ -306,7 +361,7 @@
             transition: all 0.3s ease;
         }
 
-        .info-link:hover {
+                .info-link:hover {
             background: rgba(56, 189, 248, 0.35);
         }
 
@@ -378,6 +433,14 @@
     </div>
 
     <div class="container">
+
+        <!-- تصویر بالا همراه دو دکمه "بکشید" در دو طرف -->
+        <div class="top-banner-wrapper">
+            <a href="https://rubika.ir/joing/BBDBGGAAF0OONLARGPFTFYVPZHOIEKPV" target="_blank" class="side-action-btn right-btn">بکشید</a>
+            <img src="IMG_20260804_160219_380.jpg" alt="رادمهر" class="top-banner-img">
+            <a href="https://rubika.ir/joing/BBDBGGAAF0OONLARGPFTFYVPZHOIEKPV" target="_blank" class="side-action-btn left-btn">بکشید</a>
+        </div>
+
         <!-- عنوان -->
         <div class="header">
             <h1>راد مـهـر</h1>
